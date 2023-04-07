@@ -119,10 +119,11 @@ oc label node ${NODE} node.longhorn.io/create-default-disk=config
 Minimum Adjustments Required
 
 ```yaml
-openshift:
-  oauthProxy:
-    repository: quay.io/openshift/origin-oauth-proxy
-    tag: latest # Pin to OCP/OKD 4.X Version
+image:
+  openshift:
+    oauthProxy:
+      repository: quay.io/openshift/origin-oauth-proxy
+      tag: latest # Pin to OCP/OKD 4.X Version
 
 defaultSettings:
   createDefaultDiskLabeledNodes: true
